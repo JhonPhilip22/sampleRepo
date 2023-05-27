@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("static/bg2.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        h1 {
+        color: #ffffff;
+        text-align: center;
+        margin-top: 10%;
+        font-size: 45px;
+        font-style: sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        -webkit-text-stroke: 1px black;
+    }
+
+     
+        
+        h3{
+            color: #ffffff;
+            text-align: center;
+            margin-top: 10%;
+            
+        }
+
+      
+
+        
+        li a {
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+       
+
+        li a:hover {
+            background-color: #ddd;
+            transform: scale(1.1);
+        }
+
+        .back-button {
+            margin-top: 20px;
+        }
+
+        /* Success message styles */
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        p{
+            color: #ffffff;
+            text-align: center;
+            margin-left: 5%;
+            margin-right: 5%;
+            
+        }
+
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+</style>
+</head>
+<body>
+   
+    <h1>Welcome to the FXcurrency Converter</h1>
+
+   
+    <ul style="display: block; margin: 0; padding: 0;">
+        <li><a href="/login" style="background-color: #ff7f50; display: block; margin-bottom: 10px;">Login</a></li>
+        <li><a href="/signup" style="background-color: #4caf50; display: block; margin-bottom: 10px;">Sign Up</a></li>
+        <li><a href="/convert" style="background-color: #1e90ff; display: block; margin-bottom: 10px;">Currency Converter</a></li>
+    </ul>
+    
+        
+    
+
+    <h3>About</h3>
+    <div class="centered">
+        <p>A currency converter is a vital tool for seamless global financial transactions.
+        It provides real-time exchange rate information and 
+        enables users to convert one currency into another accurately and instantly.
+        Users input the amount and select the currencies, 
+        and the converter fetches updated rates from reliable sources.
+        It supports a wide range of currencies and may offer 
+        additional features like historical exchange rate charts and fee estimators.
+        Currency converters are accessible as standalone 
+        apps or integrated into financial platforms, making them convenient for users.
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Admin Page</h1>
+    </header>
+    <main class="admin-container">
+        <p>Welcome, admin!</p>
+        
+        <h2>Delete Options</h2>
+        <form action="{{ url_for('delete_all_data') }}" method="post">
+            <button type="submit" name="delete_all">Delete All Data</button>
+        </form>
+        
+        <form action="{{ url_for('delete_specific_data') }}" method="post">
+            <select name="result_id" required>
+                {% for conversion in conversions %}
+                <option value="{{ conversion.id }}">{{ conversion.id }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" name="delete_specific">Delete Specific Data</button>
+        </form>
+        
+        <form method="post" action="/admin">
+            <input type="submit" value="Logout">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Admin Page. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Conversion Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Currency Conversion Result</h1>
+        <hr>
+        <div class="result">
+            <h2>Converted Amount:</h2>
+            <p>{{ to_currency_sign }}{{ converted_amount }}</p>
+        </div>
+        <div class="back-button">
+            <a href="/convert" class="btn">Done</a>
+        </div>
+    </div>
+</body>
+</html>
